@@ -25,38 +25,30 @@ public class AddTwoNumbers {
 
     }
 
+    //Repasar este codigo que funciona pero no es el mio completamente.
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
+        ListNode dummy = new ListNode(0);
+        ListNode temp = dummy;
+
         int carry = 0;
-        ListNode dummy = new ListNode(0); // creating an dummy list
-        ListNode curr = dummy;
-
-        while (l1 != null || l2 != null){
-
+        while(l1 != null || l2 != null || carry == 1){
             int sum = 0;
-
-            int test = 10;
-            System.out.println("sdasd" + test%5);
-
-            if (carry >= 10){
-                sum = l1.val + l2.val + carry;
-
-                System.out.println("Valor suma con Reserva: " + sum);
-            } else {
-                sum = l1.val + l2.val;
-                System.out.println("Valor de la suma es:" + sum);
-
-                if (sum >= 10){
-                    carry = sum - 10;
-                    System.out.println("ELSE de Suma es: " + sum);
-                }
+            if(l1 != null){
+                sum += l1.val;
+                l1 = l1.next;
+            }
+            if(l2 != null){
+                sum += l2.val;
+                l2 = l2.next;
             }
 
-                l1 = l1.next;
-                l2 = l2.next;
-
-            System.out.println("Fin un ciclo");
+            sum += carry;
+            carry = sum/ 10;
+            ListNode node = new ListNode(sum % 10);
+            temp.next = node;
+            temp =  temp.next;
         }
-        return null;
+        return dummy.next;
     }
 }

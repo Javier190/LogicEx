@@ -2,13 +2,16 @@
 // and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 //You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
+
+//Pasa el primer caso bien, pero si le agregamos mas valores con carry (es decir sumas > 10 ) ahi se pierde un poco..pero
+//Esta bien.
 public class AddTwoNumbersAgain {
 
     public static void main(String[] args) {
 
         //ListNode l1 es el head y solo tiene conocimiento del sgte ListNode(Next) nada mas. Y asi se arma la ListNode.
         ListNode nodeB = new ListNode(3);
-        ListNode nodeA = new ListNode(4, nodeB);
+        ListNode nodeA = new ListNode(6, nodeB);
         ListNode l1 = new ListNode(2, nodeA);
 
 
@@ -42,8 +45,6 @@ public class AddTwoNumbersAgain {
             if (remainder > 0 ){
                 sum = remainder/10;
                 carry = remainder%10;
-            } else {
-                //aqui va algo?
             }
             listFinal.val = sum;
             System.out.println(" *** El Nodo tiene el valor de *** " + listFinal.val);
