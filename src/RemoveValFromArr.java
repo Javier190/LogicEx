@@ -20,22 +20,16 @@ public class RemoveValFromArr {
     public int removeElement(int[] nums, int val) {
 
         int k = 0;
-        int[] numsTransition = new int[4];
+        int[] numsTransition = new int[8];
 
-        //Iterator<Integer> iteratorNum = Arrays.stream(nums).iterator();
-            //Aqui voy eliminando o dejando en 0 el val que es 3 en este caso
             for (int y = 0; y < nums.length; y++) {
-                if (val == nums[y]) {
-                    nums[y] = 0;
-                } else {
-                    numsTransition[y] = nums[y];
+                if (val != nums[y]) {
+                    int temp = nums[k];
+                    nums[k] = nums[y];
+                    nums[y] = temp;
                     k++;
                 }
-                //System.out.println("Valor final de lista:" + nums[y]);
             }
-            //Ahora tengo que moverlos hacia adelante.
-        //Podria crear una lista intermedia arriba y luego volver a asignar la nums.
-
         return k;
     }
 }
