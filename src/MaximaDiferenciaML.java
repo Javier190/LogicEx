@@ -5,7 +5,7 @@ public class MaximaDiferenciaML {
             return -1; // No se puede calcular la máxima diferencia
         }
 
-        int maxDiff = Integer.MIN_VALUE;
+        int maxDiff = 0;            //Integer.MIN_VALUE
         int minElement = a[0];
 
         for (int i = 1; i < a.length; i++) {
@@ -19,7 +19,7 @@ public class MaximaDiferenciaML {
             }
         }
 
-        if (maxDiff == Integer.MIN_VALUE) {
+        if (maxDiff == 0) {     //Integer.MIN_VALUE
             return -1; // No se puede calcular la máxima diferencia
         }
 

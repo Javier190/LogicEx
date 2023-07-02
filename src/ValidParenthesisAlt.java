@@ -59,6 +59,7 @@ public class ValidParenthesisAlt {
         // return true only if the stack is empty.
         // if stack is not empty that means we have unused brackets.
 
+        //return true;
         return stack.isEmpty();
 
     }
