@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
-class Solution {
+class TwoSum {
 //Ejercicio: Dado un arreglo de int. Buscar 2 numeros dentro del arreglo que sume el target Y devovler el indice de los 2 elementos.
 
     public static void main(String[] args) {

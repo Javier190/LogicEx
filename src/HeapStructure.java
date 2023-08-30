@@ -7,16 +7,14 @@ public class HeapStructure {
 
         System.out.println("Hello Heap!");
 
-        int[] arr = { 102, 3, 2, 1, 15, 5, 4, 45, 88, 96, 50, 45 };
+        int[] arr = {102, 3, 2, 1, 15, 5, 4, 45, 88, 96, 50, 45};
         int size = arr.length;
         int k = 3;
         FirstKelements(arr, size, k);
     }
 
 
-    public static void FirstKelements(int arr[], int size,
-                                      int k)
-    {
+    public static void FirstKelements(int arr[], int size, int k) {
 
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int i = 0; i < k; i++) {
@@ -25,10 +23,9 @@ public class HeapStructure {
 
         for (int i = k; i < size; i++) {
 
-            if (minHeap.peek() > arr[i]){
+            if (minHeap.peek() > arr[i]) {
                 continue;
-            }
-            else {
+            } else {
                 minHeap.poll();
                 minHeap.add(arr[i]);
             }
