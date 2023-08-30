@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class RemoveValFromArr {
+public class RemoveElement {
 
     public static void main(String[] args) {
         System.out.println("Hello Valid RemoveValFromArr!");
@@ -12,8 +10,8 @@ public class RemoveValFromArr {
         nums[2] = 3;
         nums[3] = 2;
 
-    RemoveValFromArr removeValFromArr = new RemoveValFromArr();
-    removeValFromArr.removeElement(nums, 3);
+    RemoveElement removeElement = new RemoveElement();
+    removeElement.removeElement(nums, 3);
 
     }
 
