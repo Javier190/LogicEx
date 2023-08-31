@@ -1,5 +1,8 @@
 public class CopyMergeTwoSortedList {
 
+
+    //TIPICOS DE PREGUNTAS
+
     public static void main(String[] args) {
         System.out.println("Submitted on LeetCode Merge Two Sorted List!");
 

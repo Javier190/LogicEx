@@ -1,6 +1,8 @@
 import java.util.Arrays;
 import java.util.HashSet;
 
+//tipicos DE PREGUNTAS
+
 public class LongestSubstring {
 
     //Ejercicio Numero 3 de LeetCode
@@ -10,6 +12,7 @@ public class LongestSubstring {
 
         LongestSubstring longestSubstring = new LongestSubstring();
         longestSubstring.lengthOfLongestSubstring("abcabccc");
+        System.out.println(longestSubstring.lengthOfLongestSubstring("abcabccc"));
     }
 
 
@@ -24,7 +27,8 @@ public class LongestSubstring {
             while (start < n && end < n) {
                 //Si no esta el char, se agrega
                 if (!set.contains(s.charAt(end))) {
-                    set.add(s.charAt(end++));
+                    set.add(s.charAt(end));
+                    end++;
                     maxLength = Math.max(maxLength, end - start);
 
                     //Si no esta, Se elimina.
