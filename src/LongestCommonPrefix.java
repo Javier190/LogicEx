@@ -1,14 +1,14 @@
 import java.util.Arrays;
 
-public class PrefixString {
+public class LongestCommonPrefix {
 
     public static void main(String[] args) {
         System.out.println("Hello Preffix String!");
 
-        String[] strs = {"car","plop","mub"};
+        String[] strs = {"flower","flow","flight"};
 
-        PrefixString prefixString = new PrefixString();
-        prefixString.longestCommonPrefix(strs);
+        LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+        longestCommonPrefix.longestCommonPrefix(strs);
 
     }
     //Hay que recorrer primera palabra completa por caracter compararlo con la ultimo indice hasta que no tengan equals.
@@ -25,7 +25,7 @@ public class PrefixString {
                 //Recorro y comparo cada caracter de la Primera y Ultima palabra hasta que no tengan similitud.
                 if (charFirstWord == charAtLastWord){
                     longestPrefix += Character.toString(charFirstWord);
-                    System.out.println("Prefijo mas largo" + longestPrefix);
+                    System.out.println("Prefijo mas largo: " + longestPrefix);
                 } else {
                     //Aca devuelvo el prefijo mas largo hasa el momento, pero si no hay ninguno, devuelvo String vacio "".
                     if (longestPrefix.length() > 0){
