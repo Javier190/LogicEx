@@ -1,6 +1,8 @@
 import java.util.Iterator;
 import java.util.PriorityQueue;
 
+//TIPICA DE ENTREVISTAS
+
 public class HeapStructure {
 
     public static void main(String[] args) {
