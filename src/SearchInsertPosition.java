@@ -14,32 +14,30 @@ public class SearchInsertPosition {
         nums[3] = 6;
 
         //[1,3,5,6]
-
+        searchInsertPosition.searchInsert(nums, 5);
+        searchInsertPosition.searchInsert(nums, 2);
+        searchInsertPosition.searchInsert(nums, 4);
         searchInsertPosition.searchInsert(nums, 7);
     }
 
 
     public int searchInsert(int[] nums, int target) {
 
-        String resultado = Arrays.toString(nums);
-        int index = 0;
-        boolean isNotFoundIndex = true;
+        int left = 0;
+        int right = nums.length - 1;
 
-            for (int i=0; i < nums.length; i++){
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
 
-                if (nums[i] == target){
-                    index = i;
-                    System.out.println("Devuelve un " + index);
-                } else {
-                    if (!resultado.contains(Integer.toString(target)) && nums[i]>target && isNotFoundIndex){
-                        nums[i] = target;
-                        index = i;
-                        isNotFoundIndex = false;
-                        System.out.println("Index donde seria insertado: " + index);
-                    }
-                }
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
             }
-        return index;
+        }
+        return left;
     }
 }
 
