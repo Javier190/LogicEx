@@ -18,6 +18,8 @@ public class HeapStructure {
 
     public static void FirstKelements(int arr[], int size, int k) {
 
+        System.out.println("ALA probando");
+
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int i = 0; i < k; i++) {
             minHeap.add(arr[i]);
